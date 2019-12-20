@@ -1,26 +1,49 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import AppHeader from './js/cmps/app-header.js';
+import HomePage from './js/pages/home-page.js';
+import ContactPage from './js/pages/contact-page.js';
+import ContactEdit from './js/pages/contact-edit-page.js';
+import ContactDetails from './js/pages/contact-details-page.js';
+import signupPage from './js/pages/signup-page.js';
+
+import {connect} from 'react-redux';
+
+import {loadLoggedUser} from './js/modules/contact/action.js';
+
+import {Route, Switch} from 'react-router-dom';
+
+class App extends React.Component {
+
+  render() {
+    return (
+      <div className="App">
+        <AppHeader/>
+        <Switch>
+          <Route exact path="/" component={HomePage}/>
+          <Route exact path="/contact" component={ContactPage}/>
+          <Route exact path="/contact/edit/:_id?" component={ContactEdit}/>
+          <Route exact path="/contact/:_id" component={ContactDetails}/>
+          <Route exact path="/signup" component={signupPage}/>
+        </Switch>
+      </div>
+    );
+  }
+
+  componentDidMount() {
+    this.props.loadLoggedUser();
+  }
 }
 
-export default App;
+
+const mapStateToProps = state => {
+  return {
+      currContact: state.contact.currContact,
+      loggedUser: state.contact.loggedUser
+  }
+}
+
+const mapDispatchToProps = {loadLoggedUser};
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);

@@ -1,0 +1,9 @@
+
+.main-header, .main-footer {
+    min-height: 10vh;
+}
+
+.main-content {
+    min-height: 80vh;
+    padding: 10px;
+}
