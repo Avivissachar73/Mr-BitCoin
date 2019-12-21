@@ -4,10 +4,14 @@
 
 /* PAGES */
 @import './css/pages/contact-page.css';
+@import './css/pages/contact-details.css';
+@import './css/pages/home-page.css';
 
 /* COMPONENTS */
 @import './css/cmps/app-header.css';
 @import './css/cmps/contact-list.css';
+@import './css/cmps/move-list.css';
+@import './css/cmps/money-sender.css';
 
 
 form >* {

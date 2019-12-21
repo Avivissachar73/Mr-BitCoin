@@ -2,6 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import {loadMoves} from '../modules/move/action.js';
+import {loadLoggedUser} from '../modules/contact/action.js';
 
 import MoveList from '../cmps/move-list.js';
 
@@ -14,23 +15,27 @@ class HomePage extends React.Component {
                                                move.fromUser._id === user._id);
     }
 
-    componentDidMount() {
+    async componentDidMount() {
         console.log('mounted, user:', this.props.user);
-        if (!this.props.user) this.props.history.push('/signup');
+        var user = await this.props.loadLoggedUser();
+        // if (!this.props.user) this.props.history.push('/signup');
+        if (!user) this.props.history.push('/signup');
         this.props.loadMoves();
     }
 
     render() {
         var user = this.props.user;
 
-        return <main className="main-content home-page flex align-center justify-center">
+        return user && <main className="main-content home-page flex column align-center space-around">
                 {/* <h1>Home page</h1> */}
-                {user && <div>
+                <div className="info">
                     <h2>Hello, {user.username}</h2>
-                    <h3>You now have {user.coins} coins</h3>
+                    <h3>You now have: {user.coins}$</h3>
+                </div>
+                <div className="flex column align-center">
                     <h3>Your moves:</h3>
                     <MoveList moves={this.movesToShow}></MoveList>
-                </div> || <h2>Not logged in</h2>}
+                </div>
             </main>
     }
 }
@@ -43,6 +48,6 @@ var mapedStates = state => {
     }
 }
 
-var mapedDispatches = {loadMoves};
+var mapedDispatches = {loadMoves, loadLoggedUser};
 
 export default connect(mapedStates, mapedDispatches)(HomePage);

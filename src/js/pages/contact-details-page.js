@@ -28,20 +28,19 @@ class ContactDetails extends React.Component {
         var user = this.props.loggedUser;
         return contact && 
             
-            <main className="main-content">
-                <h1>Contact</h1>
-                <Link to={`/contact/edit/${contact._id}`}>Edit</Link>
+            <main className="main-content contact-details flex column space-around align-center">
+                <h1>{contact.name}</h1>
+                {/* <Link to={`/contact/edit/${contact._id}`}>Edit</Link> */}
                 <div className="info">
-                    <h3>Name: {contact.name}</h3>
                     <h3>Email: {contact.email}</h3>
                     <h3>Phone: {contact.phone}</h3>
                     <h3>Coins: {contact.coins}</h3>
                 </div>
                 {
                 user &&
-                <section>
+                <section className="money-sender flex column align-center space-around">
                     <h3>Send some money?</h3>
-                    <h4>you have: {user.coins}</h4>
+                    <h4>you have: {user.coins}$</h4>
                     <form onSubmit={ev => this.sendMoney(ev)}>
                         <input min="0" max={user.coins} value={this.state.amountOfMoneyToSend} onChange={ev => this.updateAmount(ev)} type="number"/>
                     </form>
@@ -62,6 +61,7 @@ class ContactDetails extends React.Component {
 
         await this.props.sendMoney(loggedUser, contact, amountOfMoneyToSend);
         await this.props.saveUser(loggedUser);
+        this.setState({amountOfMoneyToSend: 0});
         this.loadContact();
     }
 

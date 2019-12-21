@@ -1,0 +1,7 @@
+.money-sender {
+    width: 250px;
+    height: 120px;
+    background-color: rgba(51, 114, 165, 0.5);
+    border-radius: 5px;
+    border: 1px solid black;
+}
