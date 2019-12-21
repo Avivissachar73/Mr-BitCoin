@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c1b1b029e573d3962c3d55a64d70241e",
+    "revision": "27261cc0def6d74a7087184fd7f025d0",
     "url": "​https://avivissachar73.github.io/Mr-BitCoin/index.html"
   },
   {
-    "revision": "22f7023e3deaa410aa0a",
-    "url": "​https://avivissachar73.github.io/Mr-BitCoin/static/css/main.d5e38549.chunk.css"
+    "revision": "3107502ff005db1d6550",
+    "url": "​https://avivissachar73.github.io/Mr-BitCoin/static/css/main.5d52a958.chunk.css"
   },
   {
     "revision": "f67a8890452ed8f60441",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "​https://avivissachar73.github.io/Mr-BitCoin/static/js/2.28e23ec1.chunk.js.LICENSE"
   },
   {
-    "revision": "22f7023e3deaa410aa0a",
-    "url": "​https://avivissachar73.github.io/Mr-BitCoin/static/js/main.f4cdcf28.chunk.js"
+    "revision": "3107502ff005db1d6550",
+    "url": "​https://avivissachar73.github.io/Mr-BitCoin/static/js/main.74de8a24.chunk.js"
   },
   {
     "revision": "1b78393e2fc97f52795a",
