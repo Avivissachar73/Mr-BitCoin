@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "​https://Avivissachar73.github.io/Mr-BitCoin/static/css/main.d5e38549.chunk.css",
+    "main.js": "​https://Avivissachar73.github.io/Mr-BitCoin/static/js/main.012af4ee.chunk.js",
+    "main.js.map": "​https://Avivissachar73.github.io/Mr-BitCoin/static/js/main.012af4ee.chunk.js.map",
+    "runtime-main.js": "​https://Avivissachar73.github.io/Mr-BitCoin/static/js/runtime-main.fe116154.js",
+    "runtime-main.js.map": "​https://Avivissachar73.github.io/Mr-BitCoin/static/js/runtime-main.fe116154.js.map",
+    "static/js/2.28e23ec1.chunk.js": "​https://Avivissachar73.github.io/Mr-BitCoin/static/js/2.28e23ec1.chunk.js",
+    "static/js/2.28e23ec1.chunk.js.map": "​https://Avivissachar73.github.io/Mr-BitCoin/static/js/2.28e23ec1.chunk.js.map",
+    "index.html": "​https://Avivissachar73.github.io/Mr-BitCoin/index.html",
+    "precache-manifest.ccfaeadc181c225673064885fc74fd9b.js": "​https://Avivissachar73.github.io/Mr-BitCoin/precache-manifest.ccfaeadc181c225673064885fc74fd9b.js",
+    "service-worker.js": "​https://Avivissachar73.github.io/Mr-BitCoin/service-worker.js",
+    "static/css/main.d5e38549.chunk.css.map": "​https://Avivissachar73.github.io/Mr-BitCoin/static/css/main.d5e38549.chunk.css.map",
+    "static/js/2.28e23ec1.chunk.js.LICENSE": "​https://Avivissachar73.github.io/Mr-BitCoin/static/js/2.28e23ec1.chunk.js.LICENSE"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.fe116154.js",
+    "static/js/2.28e23ec1.chunk.js",
+    "static/css/main.d5e38549.chunk.css",
+    "static/js/main.012af4ee.chunk.js"
+  ]
+}
