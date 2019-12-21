@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "​https://Avivissachar73.github.io/Mr-BitCoin/precache-manifest.ccfaeadc181c225673064885fc74fd9b.js"
+  "​https://avivissachar73.github.io/Mr-BitCoin/precache-manifest.701b43307a65fd0f0ebc45345c8762cf.js"
 );
 
 self.addEventListener('message', (event) => {
@@ -33,7 +33,7 @@ workbox.core.clientsClaim();
 self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute(workbox.precaching.getCacheKeyForURL("​https://Avivissachar73.github.io/Mr-BitCoin/index.html"), {
+workbox.routing.registerNavigationRoute(workbox.precaching.getCacheKeyForURL("​https://avivissachar73.github.io/Mr-BitCoin/index.html"), {
   
   blacklist: [/^\/_/,/\/[^/?]+\.[^/]+$/],
 });
