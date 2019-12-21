@@ -17,9 +17,10 @@ class ContactDetails extends React.Component {
 
     get movesToShow() {
         var contact = this.state.contact;
-        if (!contact) return [];
-        return this.props.moves.filter(move => move.toUser._id === contact._id || 
-                                        move.fromUser._id === contact._id);
+        var user = this.props.loggedUser;
+        if (!contact || !user) return [];
+        return this.props.moves.filter(move => move.toUser._id === contact._id && 
+                                               move.fromUser._id === user._id);
     }
 
     render() {
